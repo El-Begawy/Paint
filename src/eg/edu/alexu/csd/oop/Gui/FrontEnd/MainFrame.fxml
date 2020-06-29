@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="950.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="eg.edu.alexu.csd.oop.Gui.FrontEnd.Controller">
+    <children>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="Save As" />
+                        <MenuItem mnemonicParsing="false" onAction="#load" text="Load"/>
+                        <MenuItem mnemonicParsing="false" onAction="#loadJar" text="Load Jar" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close" />
+                    </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="Online">
+              <items>
+                        <MenuItem mnemonicParsing="false" onAction="#makeFireBaseRoom" text="New Room" />
+                        <MenuItem mnemonicParsing="false" onAction="#connectToFireBaseRoom" text="Join Room" />
+                        <MenuItem mnemonicParsing="false" onAction="#leaveFireBaseRoom" text="Leave Room" />
+              </items>
+            </Menu>
+            </menus>
+        </MenuBar>
+        <Canvas fx:id="canvas" height="544.0" layoutX="20.0" layoutY="143.0" width="910.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="143.0" />
+        <ImageView fitHeight="102.0" fitWidth="542.0" layoutX="18.0" layoutY="33.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/component.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="lineImage" fitHeight="49.0" fitWidth="66.0" layoutX="40.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/line.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="rectangleImage" fitHeight="60.0" fitWidth="90.0" layoutX="126.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/rectangle.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="roundRectangle" fitHeight="65.0" fitWidth="90.0" layoutX="460.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/roundedrectangle.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="circleImage" fitHeight="65.0" fitWidth="90.0" layoutX="205.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/circle.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="ellipseImage" fitHeight="65.0" fitWidth="90.0" layoutX="285.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/ellipse.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="triangleImage" fitHeight="74.0" fitWidth="76.0" layoutX="375.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Triangle.png"/>
+            </image>
+        </ImageView>
+        <ColorPicker fx:id="strokeColor" layoutX="625.0" layoutY="39.0" />
+        <ColorPicker fx:id="fillColor" layoutX="625.0" layoutY="80.0" />
+        <Label fx:id="stroke" layoutX="567.0" layoutY="40.0" text="Stroke" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="fill" layoutX="582.0" layoutY="80.0" prefHeight="15.0" prefWidth="52.0" text="Fill" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="statusLabel" layoutX="568.0" layoutY="113.0" text="Status" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="statusImage" fitHeight="27.0" fitWidth="40.0" layoutX="627.0" layoutY="115.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <ChoiceBox fx:id="strokeSizeChooser" layoutX="800.0" layoutY="39.0" prefWidth="70.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <Double fx:value="0.5" />
+                    <Double fx:value="1.0" />
+                    <Double fx:value="1.5" />
+                    <Double fx:value="2.0" />
+                    <Double fx:value="2.5" />
+                    <Double fx:value="3.0" />
+                    <Double fx:value="3.5" />
+                    <Double fx:value="4.0" />
+                    <Double fx:value="4.5" />
+                    <Double fx:value="5.0" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+    </children>
+</AnchorPane>
